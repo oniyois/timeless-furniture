@@ -1,0 +1,295 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+html{
+  scroll-behavior: smooth;
+}
+body {
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* NAVBAR */
+.nav-container {
+  width: 100%;
+}
+.nav-container .navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: black;
+  padding: 0.8rem 2rem;
+  flex-wrap: wrap;
+}
+.nav-container .navbar .logo h3 {
+  font-style: italic;
+  font-weight: bolder;
+  font-size: xx-large;
+  color: whitesmoke;
+}
+.nav-container .navbar .logo i {
+  margin-right: 10px;
+  color: goldenrod;
+}
+.nav-container .navbar .menu {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+.nav-container .navbar .menu li {
+  position: relative;
+}
+.nav-container .navbar .menu li a, .nav-container .navbar .menu li button {
+  color: white;
+  text-decoration: none;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.nav-container .navbar .menu li .drop-down-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: goldenrod;
+  padding: 0.5rem 0;
+  border-radius: 8px;
+}
+.nav-container .navbar .menu li .drop-down-menu li {
+  padding: 0.5rem 1rem;
+}
+.nav-container .navbar .menu li .drop-down-menu li a {
+  color: white;
+}
+.drop-down {
+  position: relative;
+}
+
+.drop-down-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: goldenrod;
+  padding: 0.5rem 0;
+  border-radius: 8px;
+  list-style: none;
+}
+
+.drop-down:hover .drop-down-menu {
+  display: block;
+}
+
+.nav-container .navbar .cart-ham {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.nav-container .navbar .cart-ham .hamburger {
+  display: none;
+  cursor: pointer;
+}
+.nav-container .navbar .cart-ham i {
+  color: goldenrod;
+}
+
+/* HERO */
+#hero {
+  width: 100%;
+  height: 600px;
+  background: linear-gradient(rgba(0, 0, 0, 0.7019607843), rgba(0, 0, 0, 0.7019607843)), url("/images/download (6).jfif") center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#hero .first-container {
+  color: white;
+  padding: 2rem;
+  max-width: 900px;
+}
+#hero .first-container .title-text h1 {
+  font-size: xx-large;
+  font-weight: 900;
+}
+#hero .first-container .title-paragraph p {
+  font-size: larger;
+  line-height: 2rem;
+  margin-top: 1rem;
+}
+
+.shop-btn{
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: goldenrod;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* WHY CHOOSE US */
+.second-container {
+  display: flex;
+  gap: 2rem;
+  margin: 50px;
+  flex-wrap: wrap;
+}
+.second-container .second-inner {
+  flex: 1 1 250px;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.second-container .second-inner p:last-of-type {
+  color: goldenrod;
+  font-weight: bold;
+}
+.second-container .second-inner p:last-of-type i {
+  margin-left: 0.5rem;
+}
+
+/* BEST SELLING PRODUCTS */
+.third-container {
+  background: whitesmoke;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+.third-container .third-inner {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.third-container .third-inner button {
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 35px;
+  background: rgb(240, 235, 235);
+}
+.third-container .third-inner button a {
+  text-decoration: none;
+  color: black;
+}
+.third-container .third-inner button:hover {
+  background: white;
+}
+.third-container .swiper {
+  background-color: rgb(238, 226, 226);
+  padding: 1rem;
+}
+.card-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  justify-items: center;
+}
+.card {
+  background: white;
+  border-radius: 25px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  max-height: 600px;
+} 
+
+.image-content {
+  width: 100%;
+  height: auto;
+} 
+.image-content img { 
+  width: 100%;
+  max-height: 70%;
+  object-fit: cover;
+  border-radius: 10%;
+}
+.image-content img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+.card-content {
+  padding: 1rem;
+  text-align: left;
+}
+.product-rating i {
+  color: goldenrod;
+}
+.price-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+.price {
+  display: flex;
+  gap: 0.5rem;
+  align-items: baseline;
+}
+.price p {
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+.price h3 {
+  font-size: 1.2rem;
+}
+.product-measure {
+  display: flex;
+  gap: 0.5rem;
+}
+.product-measure button {
+  padding: 0.3rem 0.5rem;
+  border-radius: 50%;
+  border: none;
+  background: rgb(43, 42, 42);
+  color: white;
+  cursor: pointer;
+}
+.third-container .swiper .card-wrapper .card .card-content .price-wrap .product-measure .quantity {
+  width: 2rem;
+  text-align: center;
+  border: none;
+  background: transparent;
+  font-weight: bold;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+  .nav-container .navbar .menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: black;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 1rem 0;
+  }
+  .nav-container .navbar .cart-ham .hamburger {
+    display: block;
+  }
+  .nav-container .navbar .cart-ham .hamburger:hover + .menu {
+    display: flex;
+  }
+  .card-wrapper {
+  
+  grid-template-columns: repeat(1, 1fr);
+  
+}
+.card {
+  
+  width: 90%;
+  margin: 24px auto;
+  
+} 
+
+}
