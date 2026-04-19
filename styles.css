@@ -135,7 +135,13 @@ body {
   cursor: pointer;
 }
 
+
 /* WHY CHOOSE US */
+
+.title {
+  text-align: center;
+  padding: 24px 0;
+}
 .second-container {
   display: flex;
   gap: 2rem;
@@ -310,6 +316,72 @@ body {
   margin-top:20px;
   border-top:1px solid #ddd;
   padding-top:10px;
+}
+
+.footer {
+  background: #111;
+  color: #fff;
+  padding: 60px 8% 20px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+.footer h3,
+.footer h4 {
+  margin-bottom: 15px;
+}
+
+.footer p {
+  font-size: 14px;
+  color: #bbb;
+  line-height: 1.6;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+  text-decoration: none;
+  color: #bbb;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.footer-links ul li a:hover {
+  color: #fff;
+}
+
+.footer-social .social-icons a {
+  margin-right: 10px;
+  color: #bbb;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.footer-social .social-icons a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  border-top: 1px solid #333;
+  margin-top: 40px;
+  padding-top: 15px;
+  text-align: center;
+}
+
+.footer-bottom p {
+  font-size: 13px;
+  color: #777;
 }
 
 /* MEDIA QUERIES */
